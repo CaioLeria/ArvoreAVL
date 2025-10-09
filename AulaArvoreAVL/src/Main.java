@@ -16,18 +16,20 @@ public class Main {
             System.out.println("0 - Sair");
             System.out.println("1 - Inserir");
             System.out.println("2 - Mostra fator baleanceamento");
+            System.out.println("");
             opcao = sc.nextInt();
             switch (opcao){
                 case 0:
-                    System.out.println("Sisema encerrando");
+                    System.out.println("Sistema encerrando");
                     break;
                 case 1:
-                    System.out.println("imforme o valor a ser inserido: ");
+                    System.out.println("informe o valor a ser inserido: ");
                     int valor = sc.nextInt();
-                    avl.root=avl.inserirH(avl.root,valor);
+                    avl.root=avl.inserirAVL(avl.root,valor);
+                    avl.atualizaAlturas(avl.root);
                     break;
                 case 2:
-                    System.out.println("Aresentando AVL");
+                    System.out.println("Apresentando AVL");
                     avl.mostraFB(avl.root);
                     break;
                 default:
