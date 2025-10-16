@@ -41,7 +41,7 @@ public NO root = null;
         if (p!=null){
             mostraFB(p.esq);
             mostraFB(p.dir);
-            System.out.printf("Dado"+p.dado+"\n FB: "+(p.hDir-p.hEsq));
+            System.out.printf("Dado "+p.dado+"\t FB: "+(p.hDir-p.hEsq));
         }
     }
     public NO rotacaoDireita (NO p){

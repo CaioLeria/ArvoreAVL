@@ -16,7 +16,7 @@ public class Main {
             System.out.println("0 - Sair");
             System.out.println("1 - Inserir");
             System.out.println("2 - Mostra fator baleanceamento");
-            System.out.println("");
+            System.out.println("3 - Remove o nó escolhido ");
             opcao = sc.nextInt();
             switch (opcao){
                 case 0:
@@ -31,6 +31,13 @@ public class Main {
                 case 2:
                     System.out.println("Apresentando AVL");
                     avl.mostraFB(avl.root);
+                    break;
+                case 3:
+                    System.out.println("informe o valor a ser removido:");
+                    valor=sc.nextInt();
+                    avl.root = avl.removeValor(avl.root,valor);
+                    avl.root = avl.atualizaAlturaBalanceamento(avl.root);
+                    avl.atualizaAlturas(avl.root);
                     break;
                 default:
                     System.out.println("opçao invalida");
